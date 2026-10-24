@@ -28,7 +28,7 @@ const Dashboard = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}><CssBaseline /><AppBar position="sticky" elevation={0}><Toolbar><Typography variant="h6" fontWeight={900}>Medi Pipeline Analytics</Typography></Toolbar></AppBar><Container maxWidth="xl" sx={{ py: 4 }}><Stack spacing={3}>
+    <ThemeProvider theme={theme}><CssBaseline /><AppBar position="sticky" elevation={0}><Toolbar><Typography variant="h6" fontWeight={900}>Clinical Rules Engine</Typography></Toolbar></AppBar><Container maxWidth="xl" sx={{ py: 4 }}><Stack spacing={3}>
       <Paper elevation={0} sx={{ p: 3, border: '1px solid', borderColor: 'divider', borderRadius: 3 }}><Grid container spacing={2} alignItems="center"><Grid item xs={12} md={8}><Typography variant="h4" fontWeight={900}>Access Candidate Pipeline</Typography><Typography color="text.secondary">Enterprise dashboard for hierarchy reachability, filter funnel, and timing analysis.</Typography></Grid><Grid item xs={12} md={4}><UserSelector users={users} value={selectedUserId} onChange={setSelectedUserId} disabled={usersLoading || loading} /></Grid><Grid item xs={12} md={4}><PipelineButton onClick={runPipeline} loading={loading} disabled={!selectedUserId || usersLoading} /></Grid></Grid></Paper>
       {usersError && <Alert severity="error">{usersError}</Alert>}{error && <Alert severity="error">{error}</Alert>}{loading && <LoadingSpinner message="Running candidate-set pipeline..." />}
       <Tabs value={tab} onChange={(_, value) => setTab(value)}><Tab label="Dashboard" /><Tab label="Comparison" /></Tabs>

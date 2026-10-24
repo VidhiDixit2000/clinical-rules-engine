@@ -1,6 +1,6 @@
-# Medi Pipeline Dashboard
+# Clinical Rules Dashboard
 
-Production-ready React frontend for the Medi Pipeline FastAPI backend. The app uses Vite, JavaScript, Material UI, Axios, Recharts, and React Flow.
+Production-ready React frontend for the Clinical Rules Engine FastAPI backend. The app uses Vite, JavaScript, Material UI, Axios, Recharts, and React Flow.
 
 ## Features
 
