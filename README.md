@@ -66,7 +66,7 @@ frontend/
 ### 1. Clone repository
 
 ```bash
-git clone <repository-url>
+git clone 'https://github.com/VidhiDixit2000/clinical-rules-engine.git'
 cd clinical-rules-engine
 ```
 
@@ -138,8 +138,8 @@ The project uses PostgreSQL hosted on Supabase.
 Database schema and sample data are available in
 
 ```
-supabase/schema.sql
-supabase/seed.sql
+Supabase/Schema.sql
+Supabase/seed.sql
 ```
 
 ---
