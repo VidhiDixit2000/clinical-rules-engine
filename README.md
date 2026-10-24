@@ -1,4 +1,4 @@
-# Supra Engine Analytics
+# Clinical Rules Engine
 
 A FastAPI + React dashboard that computes a user's accessible clinical knowledge set using a graph-based permission pipeline.
 
@@ -51,7 +51,7 @@ backend/
         main.py
 
 frontend/
-    Medi-Pipeline-main/
+    clinical-rules-dashboard/
         src/
             components/
             hooks/
@@ -67,7 +67,7 @@ frontend/
 
 ```bash
 git clone <repository-url>
-cd supra_engine
+cd clinical-rules-engine
 ```
 
 ### 2. Backend
@@ -118,7 +118,7 @@ http://localhost:8000/docs
 ### 3. Frontend
 
 ```bash
-cd frontend/Medi-Pipeline-main
+cd frontend/clinical-rules-dashboard
 npm install
 npm run dev
 ```
