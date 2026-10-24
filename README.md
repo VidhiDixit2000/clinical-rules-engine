@@ -66,7 +66,7 @@ frontend/
 ### 1. Clone repository
 
 ```bash
-git clone 'https://github.com/VidhiDixit2000/clinical-rules-engine.git'
+git clone https://github.com/VidhiDixit2000/clinical-rules-engine.git
 cd clinical-rules-engine
 ```
 
