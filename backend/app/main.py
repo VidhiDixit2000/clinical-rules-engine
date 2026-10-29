@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -5,9 +7,21 @@ from app.api.pipeline import router as pipeline_router
 
 app = FastAPI()
 
+
+def _parse_cors_origins():
+    """Read CORS_ORIGINS from the environment as a comma-separated list.
+
+    Falls back to http://localhost:5173 when the variable is unset, so local
+    development keeps working unchanged. Whitespace around each entry is
+    stripped and empty entries are ignored.
+    """
+    raw = os.environ.get("CORS_ORIGINS", "http://localhost:5173")
+    return [origin.strip() for origin in raw.split(",") if origin.strip()]
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=_parse_cors_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
